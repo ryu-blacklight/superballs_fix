@@ -63,11 +63,11 @@ void cursor(){
   
   int[] p1 = {mouseX+2, mouseY-2};
   int[] p2 = {mouseX+24, mouseY-24};
-  int[] p3 = {mouseX+170, mouseY-24};
-  int[] p4 = {mouseX+180, mouseY-34};
-  int[] p5 = {mouseX+200, mouseY-34};
-  int[] p01 = {mouseX+190, mouseY-30};
-  int[] p02 = {mouseX+200, mouseY-30};
+  int[] p3 = {mouseX+180, mouseY-24};
+  int[] p4 = {mouseX+190, mouseY-34};
+  int[] p5 = {mouseX+210, mouseY-34};
+  int[] p01 = {mouseX+200, mouseY-30};
+  int[] p02 = {mouseX+210, mouseY-30};
   
   line(p1[0], p1[1], p2[0], p2[1]);
   line(p2[0], p2[1], p3[0], p3[1]);
@@ -77,7 +77,7 @@ void cursor(){
   
   textSize(16);
   fill(0,0,100);
-  text("Previous Ballcolor",mouseX+30,mouseY-28);
+  text("Previous Ballcolor "+sb.size(),mouseX+30,mouseY-28);
 }
 
 
