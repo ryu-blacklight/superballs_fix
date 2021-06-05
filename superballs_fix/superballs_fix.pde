@@ -2,7 +2,6 @@ ArrayList<Superball> sb;
 //オブジェクトの宣言。「可変配列とSuperballクラスを使ってsbを作れるようにするよ」　作れるようにしただけ。
 
 float grvty, x, y, dia, addX, addY, rndHue, rnd1;
-int i;
 
 //int型で定義すると、減速処理中に速度が１未満の小数点になった時に速度が０となり演算処理が停止します
 //必ずfloat型の浮動小数点で定義してください
@@ -10,7 +9,7 @@ int i;
 
 void setup(){
   size(1000, 1000);
-  colorMode(HSB, 360, 100, 100);
+  colorMode(HSB, 360, 100, 100, 1000);
   
   sb = new ArrayList<Superball>();  //実際にsbを作るのはここから。可変配列を設定。
   
@@ -24,9 +23,9 @@ void draw(){
   
   cursor();
   
-  for(int i = 0; i < sb.size(); i++){
-    sb.get(i).display();
-    sb.get(i).move();
+  for(int j = 0; j < sb.size(); j++){
+      sb.get(j).display();
+      sb.get(j).move();
   }
   //召喚したインスタンスごとに処理を実行。
   //個人メモ：get()は可変配列の参照。move()とかはインスタンスのメソッド参照。
@@ -63,11 +62,11 @@ void cursor(){
   
   int[] p1 = {mouseX+2, mouseY-2};
   int[] p2 = {mouseX+24, mouseY-24};
-  int[] p3 = {mouseX+180, mouseY-24};
-  int[] p4 = {mouseX+190, mouseY-34};
-  int[] p5 = {mouseX+210, mouseY-34};
-  int[] p01 = {mouseX+200, mouseY-30};
-  int[] p02 = {mouseX+210, mouseY-30};
+  int[] p3 = {mouseX+170, mouseY-24};
+  int[] p4 = {mouseX+180, mouseY-34};
+  int[] p5 = {mouseX+200, mouseY-34};
+  int[] p01 = {mouseX+190, mouseY-30};
+  int[] p02 = {mouseX+200, mouseY-30};
   
   line(p1[0], p1[1], p2[0], p2[1]);
   line(p2[0], p2[1], p3[0], p3[1]);
@@ -77,7 +76,7 @@ void cursor(){
   
   textSize(16);
   fill(0,0,100);
-  text("Previous Ballcolor "+sb.size(),mouseX+30,mouseY-28);
+  text("Previous Ballcolor",mouseX+30,mouseY-28);
 }
 
 
