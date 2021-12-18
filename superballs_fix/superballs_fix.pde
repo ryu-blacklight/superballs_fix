@@ -9,9 +9,16 @@ float grvty, x, y, dia, addX, addY, rndHue, rnd1;
 
 void setup(){
   size(1000, 1000);
-  colorMode(HSB, 360, 100, 100, 1000);
+  colorMode(HSB, 360, 100, 100, 200);
   
   sb = new ArrayList<Superball>();  //実際にsbを作るのはここから。可変配列を設定。
+  if(sb.size() != 0){
+    for(int i = 0; i < sb.size(); i++){
+      if(sb.get(i).vanishCount > 750){
+        sb.remove(i);
+      }
+    }
+  }
   
   frameRate(60);
   rndHue = 0;

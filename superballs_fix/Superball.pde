@@ -5,7 +5,7 @@ public class Superball{
   
   float upAdj, downAdj, leftAdj, rightAdj;
   int vanishCount = 0;
-  int alpha = 1000;
+  int alpha = 200;
   //属性。属性というのは多分クラス内で使う変数のことだと思う。
   
   Superball(float constX, float constY, float constDia, float constGrvty,
@@ -38,6 +38,11 @@ public class Superball{
     
     
     if(x > rightAdj || x < leftAdj){
+      if(x > rightAdj){
+        prePos = rightAdj;
+      }else{
+        prePos = leftAdj;
+      }
       addX *= (-1);
     }
     
@@ -53,7 +58,7 @@ public class Superball{
   
   void display(){  //球の描写を担当する関数
     if(vanishCount > 500){
-      alpha -= 5;
+      alpha -= 1;
     }
     
     fill(hue, 80, 100, alpha);
