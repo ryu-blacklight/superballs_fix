@@ -4,4 +4,4 @@
 <br><br><br>
 My personal works for the purpose of "Using class" and "Coding in multiple file".<br>
 Appearing bouncy balls when every click.<br>
-Next ball color is showing at cursor color.
+Previous ball color is showing at cursor color.
